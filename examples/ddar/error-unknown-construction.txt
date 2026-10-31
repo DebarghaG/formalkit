@@ -1,0 +1,1 @@
+a b c = triangle a b c; d = nonsense d a b ? perp a d b c

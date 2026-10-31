@@ -1,0 +1,5 @@
+; `rbt` is a typo for `robot`: the goal would look unreachable ("unsolvable")
+(define (problem typo) (:domain move)
+ (:objects robot home work)
+ (:init (at rbt home) (link home work))
+ (:goal (at robot work)))

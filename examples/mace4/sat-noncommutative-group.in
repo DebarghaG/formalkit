@@ -1,0 +1,7 @@
+% The smallest non-commutative group (S3, size 6).
+formulas(assumptions).
+  e * x = x.
+  x' * x = e.
+  (x * y) * z = x * (y * z).
+  exists a exists b (a * b != b * a).
+end_of_list.

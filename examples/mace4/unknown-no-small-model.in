@@ -1,0 +1,13 @@
+% Every group with x*x = e is commutative, so no countermodel exists - but
+% Mace4 only searches finite sizes, so it can only report "none up to 6".
+assign(end_size, 6).
+formulas(assumptions).
+  e * x = x.
+  x' * x = e.
+  (x * y) * z = x * (y * z).
+  x * x = e.
+end_of_list.
+
+formulas(goals).
+  x * y = y * x.
+end_of_list.

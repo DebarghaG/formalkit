@@ -1,0 +1,2 @@
+wet :- rain
+query(wet).

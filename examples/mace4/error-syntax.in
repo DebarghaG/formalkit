@@ -1,0 +1,3 @@
+formulas(assumptions).
+  x * = y.
+end_of_list.

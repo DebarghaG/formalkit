@@ -1,0 +1,8 @@
+formulas(assumptions).
+  p(a).
+  p(x) -> q(x).
+end_of_list.
+
+formulas(goals).
+  q(b).
+end_of_list.

@@ -1,0 +1,15 @@
+vocabulary V {
+    type Person := {ann, bob, cid}
+    smokes: Person -> Bool
+    friends: Person * Person -> Bool
+}
+theory T:V {
+    !x, y in Person: friends(x, y) & smokes(x) => smokes(y).
+    smokes(ann).
+}
+structure S:V {
+    friends := {(ann, bob), (bob, cid)}.
+}
+procedure main() {
+    pretty_print(model_propagate(T, S))
+}

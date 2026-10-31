@@ -1,0 +1,4 @@
+*
+!formalkit
+!docker
+formalkit/**/__pycache__

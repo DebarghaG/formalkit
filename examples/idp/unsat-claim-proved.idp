@@ -1,0 +1,17 @@
+// Claim: cid smokes. Assert its negation; unsat proves the claim.
+vocabulary V {
+    type Person := {ann, bob, cid}
+    smokes: Person -> Bool
+    friends: Person * Person -> Bool
+}
+theory T:V {
+    !x, y in Person: friends(x, y) & smokes(x) => smokes(y).
+    smokes(ann).
+    ~smokes(cid).
+}
+structure S:V {
+    friends := {(ann, bob), (bob, cid)}.
+}
+procedure main() {
+    print(model_check(T, S))
+}

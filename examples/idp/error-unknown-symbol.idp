@@ -1,0 +1,3 @@
+vocabulary V { p: () -> Bool }
+theory T:V { q(). }
+procedure main() { pretty_print(model_expand(T)) }

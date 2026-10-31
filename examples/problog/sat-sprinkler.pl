@@ -1,0 +1,5 @@
+0.6::rain. 0.2::sprinkler.
+wet :- rain.
+wet :- sprinkler.
+evidence(wet, true).
+query(rain).

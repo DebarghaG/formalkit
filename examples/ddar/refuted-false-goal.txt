@@ -1,0 +1,2 @@
+# The midpoint of AB is not equidistant from C in a general triangle.
+a b c = triangle a b c; m = midpoint m a b ? cong m a m c

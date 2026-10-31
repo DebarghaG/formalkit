@@ -1,0 +1,9 @@
+% Every group of order 4 is commutative: with no goals, an exhaustive search
+% of size 4 that finds no model means no such group of that size exists.
+assign(domain_size, 4).
+formulas(assumptions).
+  (x * y) * z = x * (y * z).
+  e * x = x.
+  i(x) * x = e.
+  exists u exists v (u * v != v * u).
+end_of_list.

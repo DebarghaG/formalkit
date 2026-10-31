@@ -1,0 +1,5 @@
+(define (domain move)
+ (:requirements :strips)
+ (:predicates (at ?o ?l) (link ?a ?b))
+ (:action go :parameters (?o ?a ?b) :precondition (and (at ?o ?a) (link ?a ?b))
+   :effect (and (at ?o ?b) (not (at ?o ?a)))))

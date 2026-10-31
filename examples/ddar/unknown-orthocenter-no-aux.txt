@@ -1,0 +1,2 @@
+# Same theorem without the auxiliary point: DD+AR saturates without a proof.
+a b c = triangle a b c; d = on_tline d b a c, on_tline d c a b ? perp a d b c

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formalkit"
+version = "0.1.0"
+description = "One interface between LLMs and formal tools: SMT, SAT, theorem provers, ATPs, ASP, planners, model checkers, CP/MILP and program verifiers, each in its own container."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+agent = ["openai>=1.0"]
+dev = ["pytest", "openai>=1.0"]
+
+[project.scripts]
+formalkit = "formalkit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["formalkit*"]
+
+[tool.pytest.ini_options]
+markers = ["docker: needs Docker and built backend images"]
+
+[tool.ruff]
+line-length = 120

@@ -1,0 +1,3 @@
+vocabulary V { x: () -> Int  y: () -> Int }
+theory T:V { 0 =< x() =< 10. 0 =< y() =< 10. x() + y() = 12. }
+procedure main() { pretty_print(minimize(T, term="x()")) }
